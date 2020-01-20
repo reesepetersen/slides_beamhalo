@@ -1,0 +1,102 @@
+\newcommand{\HERWIG} {{\textsc{herwig}}\xspace}
+\newcommand{\ttbar}{{\PQt{}\PAQt}\xspace}
+\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\POWHEG} {{\textsc{powheg}}\xspace}
+
+\newcommand{\URLsymbol}{$\vcenter{\hbox{\scalebox{0.2}{\begin{tikzpicture}
+    \draw[-,line width=3, rounded corners] (0.3,0.3) -- (0.9,0.9) -- (1.1,0.7) --
+    (0.5,0.1) -- cycle;
+    \draw[-,line width=3, rounded corners,gray] (0,0) -- (0.6,0.6) -- (0.8,0.4) --
+    (0.2,-0.2) -- cycle;
+    \draw[-,line width=3, rounded corners] (1,0.8) -- (1.1,0.7) --
+    (0.5,0.1) -- (0.4,0.2);
+\end{tikzpicture}}}}$}
+
+%UofMN colors
+\definecolor{UMNMaroon}{RGB}{122,0,25}
+\definecolor{UMNLightMaroon}{RGB}{153,0,28}
+\definecolor{UMNDarkMaroon}{RGB}{92,0,19}
+
+\definecolor{UMNGold}{RGB}{255,204,51}
+\definecolor{UMNLightGold}{RGB}{255,215,95}
+\definecolor{UMNDarkGold}{RGB}{191,153,38}
+
+\definecolor{UMNStormy}{RGB}{64,77,91}
+\definecolor{UMNSunny}{RGB}{0,149,182}
+\definecolor{UMNLightGray}{RGB}{213,214,210}
+
+%Packages to include
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{datetime}
+\usepackage{textpos} 
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage[Q=yes]{examplep}
+%Only one plot on the slide
+% #1 Slide Title
+% #2 Filepath to image
+\newcommand{\oneplotslide}[2]{
+    \begin{frame}
+        \frametitle{#1}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{#2}
+        \end{figure}
+     \end{frame}
+}
+
+\mode<presentation> {
+ 
+    \setbeamercolor{structure}{fg = UMNStormy }
+    
+    \usetheme{Madrid}
+    
+    \addtobeamertemplate{frametitle}{}{%
+        \begin{textblock*}{100mm}(11.67cm,-0.95cm)
+            \includegraphics[height=1.01cm,width=1.01cm]{cms_goldy.pdf}
+        \end{textblock*}
+    }
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+    \setbeamercolor{frametitle}{fg = UMNGold, bg = UMNMaroon }
+    \setbeamercolor{title}{fg = UMNGold, bg = UMNMaroon }
+    \setbeamercolor{author in head/foot}{fg = UMNGold, bg = UMNDarkMaroon }
+    %\setbeamercolor{title in head/foot}{fg = UMNGold, bg = UMNMaroon}
+    \setbeamercolor{date in head/foot}{fg = UMNGold, bg = UMNLightMaroon}
+
+    \setbeamersize{text margin left=0.0cm}
+
+    \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
+    
+    \setbeamercolor{itemize item}{fg = UMNMaroon}
+    \setbeamercolor{itemize subitem}{fg = black}
+    \setbeamercolor{itemize subsubitem}{fg = UMNMaroon}
+    
+    \setbeamertemplate{itemize item}[circle]
+    \setbeamertemplate{itemize subitem}[triangle]
+    \setbeamertemplate{itemize subsubitem}{\raisebox{-0.4em}{\scalebox{3.0}{$\cdot$}}}
+
+    \setbeamertemplate{itemize/enumerate body begin}{\footnotesize}
+    \setbeamertemplate{itemize/enumerate subbody begin}{\scriptsize}
+    \setbeamertemplate{itemize/enumerate subsubbody begin}{\tiny}
+
+}
