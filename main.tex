@@ -11,73 +11,19 @@
 \title[UMN-CMS Group Meeting]{}
 
 \begin{document}
-%\begin{frame}{Beam Halo in End-cap Identification}
-%    \begin{itemize}
-%        \item Goal: Train a boosted decision tree to identify events with beam halo activity.
-%        \item Benefit: Reduce beam halo background in end-cap for cleaner analyses.
-%        \end{itemize}
-%\end{frame}
-%\begin{frame}{Overview}
-%    \begin{itemize}
-%        \item BDT: Training Features
-%        \item Feature Shape Comparisons
-%        \item Feature Correlations
-%        \item Training: Prompt Data, Beam Halo Data
-%        \item Training: Prompt MC, Beam Halo Data
-%    \end{itemize}
-%\end{frame}
-%\begin{frame}[fragile]{Data Beam Halo}
-%\begin{verbatim}
-%  dataset=/SinglePhoton/Run2017*-31Mar2018-v1/MINIAOD
-%\end{verbatim}
-%    \begin{itemize}
-%        \item Trigger: HLT\_Photon\_200
-%        \item pfMET \(>\) 150 GeV
-%        \item 1.566 \(<|\) phoEta \(|<\) 2.5
-%        \item \(|\) phoPhi \(|<\) 0.2 or \(|\) phoPhi \(|>\) 2.9416
-%        \item phoEt \(>\) 250 MeV
-%    \end{itemize}
-%\end{frame}
-%\begin{frame}[fragile]{MC Beam Halo}
-%\begin{verbatim}
-%  /hdfs/store/user/shilpi/aNTGC/ggNtuplizerSkim_AOD/
-%  BHStudy/MC_BH/BeamHalo_2017_Beam*
-%\end{verbatim}
-%    \begin{itemize}
-%        \item Trigger: HLT\_Photon\_2005
-%        \item pfMET \(>\) 150 GeV
-%        \item 1.566 \(<|\) phoEta \(|<\) 2.5
-%        \item phoEt \(>\) 250 MeV
-%    \end{itemize}
-%\end{frame}
-%\begin{frame}{Selection Key}
-%    \begin{itemize}
-%        \item t = HLT\_Photon\_200
-%        \item m = pfMET \(>\) 150 GeV
-%        \item n = \(1.566<|\eta|<2.5\)
-%        \item e = \(E_t>250\) GeV
-%    \end{itemize}{}
-%\end{frame}
-%\begin{frame}{Data source for Beam Halo}
-%    \begin{itemize}
-%        \item dataset=/SinglePhoton/Run2017*-31Mar2018-v1/MINIAOD
-%        \item This set includes eras B-F
-%        \item 47997 events
-%        \item 50759 photons
-%    \end{itemize}
-%\end{frame}
-%\begin{frame}{MC Source, for Prompt photons only}
-%\begin{itemize}
-%    \item Prompt photons: \Q{/ZNuNuGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph/RunIIFall17DRPremix-PU2017_94X_mc2017_realistic_v11-v1/AODSIM}
-%    \item 671201 events
-%    \item 167397 photons
-%\end{itemize}
-%\end{frame}
-\begin{frame}{Code}
+\begin{frame}{Selection Key}
     \begin{itemize}
-        \item \href{https://github.com/reesepetersen/beamhalo}{\Q{https://github.com/reesepetersen/beamhalo}}
-    \end{itemize}
+        \item t = HLT\_Photon\_200
+        \item m = pfMET \(>\) 150 GeV
+        \item n = \(1.566<|\eta|<2.5\)
+        \item e = \(E_t>250\) GeV
+    \end{itemize}{}
 \end{frame}
+%\begin{frame}{Code}
+%    \begin{itemize}
+%        \item \href{https://github.com/reesepetersen/beamhalo}{\Q{https://github.com/reesepetersen/beamhalo}}
+%    \end{itemize}
+%\end{frame}
 %\begin{frame}{Features}
 %    \begin{itemize}
 %        \item R9
@@ -94,20 +40,17 @@
 %        \item phoSCPhiWidth
 %    \end{itemize}
 %\end{frame}
-\begin{frame}{Beam Halo data, phoHoverE vs phoE}
-    \includegraphics[width=\linewidth]{phoE_vs_phoHoverE_anTGCtree_data_beamhalo.png}
+\begin{frame}{Data, tmne, phoEta vs phoPhi}
+    \includegraphics[width=\linewidth]{}
+\end{frame}
+\begin{frame}{Beam Halo data, phoH vs phoE}
+    \includegraphics[width=\linewidth]{phoE_vs_phoH_anTGCtree_data_beamhalo.png}
 \end{frame}
 \begin{frame}{Beam Halo data (vertical), phoHoverE vs phoE}
     \includegraphics[width=\linewidth]{phoE_vs_phoHoverE_anTGCtree_data_bhvertical.png}
-\end{frame}{}
-\begin{frame}{Beam Halo MC, phoHoverE vs phoE}
-    \includegraphics[width=\linewidth]{phoE_vs_phoHoverE_anTGCtree_MC_beamhalo.png}
 \end{frame}
-\begin{frame}{Prompt data, phoHoverE vs phoE}
-    \includegraphics[width=\linewidth]{phoE_vs_phoHoverE_anTGCtree_data_promptall.png}
-\end{frame}
-\begin{frame}{Prompt MC, phoHoverE vs phoE}
-    \includegraphics[width=\linewidth]{phoE_vs_phoHoverE_anTGCtree_MC_prompt.png}
+\begin{frame}{Beam Halo data (vertical), phoH vs phoE}
+    \includegraphics[width=\linewidth]{phoE_vs_phoH_anTGCtree_data_bhvertical.png}
 \end{frame}
 \end{document}
 
